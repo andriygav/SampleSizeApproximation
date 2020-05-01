@@ -1,0 +1,40 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+
+\usepackage{a4wide}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{euscript}
+\usepackage{theorem}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{bm}
+\usepackage{tabularx}
+\usepackage{adjustbox}
+
+\usepackage{rotating}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\newcommand*{\No}{No.}
+
+\begin{document}
+
+$$l\left(\mathfrak{D}, \hat{\textbf{w}}\right) = -\frac{1}{2m\sigma^2}\left(\textbf{y}-\textbf{Xw}\right)^{\mathsf{T}}\left(\textbf{y}-\textbf{Xw}\right) - \frac{1}{2}\ln\sigma^2 - \frac{1}{2}\ln2\pi, \eqno(1)$$
+
+$$\hat{\textbf{w}} = \left(\frac{1}{2\sigma^2}\textbf{X}^{\mathsf{T}}\textbf{X}\right)^{-1}\frac{1}{2\sigma^2}\textbf{X}^{\mathsf{T}}\textbf{y} , \eqno(2)$$
+
+(1) и (2)  получаем:
+
+$$l\left(\mathfrak{D}, \hat{\textbf{w}}\right) = -\frac{1}{2m\sigma^2}\textbf{y}^{\mathsf{T}}\left(\textbf{I}-\textbf{X}\left(\textbf{X}^{\mathsf{T}}\textbf{X}\right)^{-1}\textbf{X}^{\mathsf{T}}\right)\left(\textbf{I}-\textbf{X}\left(\textbf{X}^{\mathsf{T}}\textbf{X}\right)^{-1}\textbf{X}^{\mathsf{T}}\right)\textbf{y} - \frac{1}{2}\ln\sigma^2 - \frac{1}{2}\ln2\pi, \eqno(3)$$
+
+$$l\left(\mathfrak{D}, \hat{\textbf{w}}\right) = -\frac{1}{2m^2\sigma^2}\textbf{y}^{\mathsf{T}}\left(m\textbf{I}- \textbf{X}\textbf{H}_0\textbf{X}^{\mathsf{T}}\right)\textbf{y} - \frac{1}{2}\ln\sigma^2 - \frac{1}{2}\ln2\pi, \eqno(4)$$
+
+\end{document}
